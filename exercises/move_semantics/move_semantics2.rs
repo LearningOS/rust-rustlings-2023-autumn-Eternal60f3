@@ -21,8 +21,8 @@ fn main() {
 
 fn fill_vec(vec:&mut Vec<i32>) -> Vec<i32> {
     let new_vec = vec![22, 44, 66];
-    for i in new_vec {
-        vec.push(i);
+    for i in new_vec.iter() {
+        vec.push(*i);
     }
     new_vec
 }
