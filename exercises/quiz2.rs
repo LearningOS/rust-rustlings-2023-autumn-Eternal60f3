@@ -37,7 +37,6 @@ mod my_module {
             // TODO: Complete the function body. You can do it!
             match command {
                 Command::Uppercase => {
-                    let s: String = string.to_uppercase();
                     output.push(string.to_uppercase());
                 },
                 Command::Trim => {
@@ -46,9 +45,9 @@ mod my_module {
                 Command::Append(size) => {
                     let mut s: String = String::from(string);
                     let tmp: String = String::from("bar");
-                    for i in 0..*size {
+                    (0..*size).for_each(|i| {
                         s.push_str(&tmp);
-                    }
+                    });
                     output.push(s);
                 }
             }
