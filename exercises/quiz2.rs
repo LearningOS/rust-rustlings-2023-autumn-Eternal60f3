@@ -37,7 +37,7 @@ mod my_module {
             // TODO: Complete the function body. You can do it!
             match command {
                 Command::Uppercase => {
-                    output.push(string.to_uppercase());
+                    output.push(string.to_uppercase());  
                 },
                 Command::Trim => {
                     output.push(string.trim().to_string());
